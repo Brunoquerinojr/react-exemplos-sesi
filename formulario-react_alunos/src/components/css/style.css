@@ -1,0 +1,165 @@
+/* Importa a fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap');
+
+/* Importa os arquivos reset.css e variables.css localmente */
+@import url('./reset.css');
+@import url('./variables.css');
+
+/* Estilo para o elemento html */
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 79%);
+}
+
+.container {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: var(--20-px);
+    max-width: var(--bold-font-n-width);
+    max-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para a classe .form-sign-up */
+.form-sign-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+h1 {
+    margin: 10px 0;
+    font-weight: var(--medium-f-weight);
+    font-size: 30px;
+    color: var(--color-light-green);
+}
+
+.form {
+    margin: 6px 0;
+    width: 235px;
+}
+
+input {
+    margin: 6px 0;
+    border-bottom: 1px solid var(--color-light-green);
+    background-color: none;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none; 
+}
+
+.form label {
+    font-size: var(--20-px);
+    font-weight: var(--medium-f-weight);
+    font-weight: 300;
+}
+
+.password-input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Estilo para o elemento input dentro de .password-input-container */
+.password-input-container input {
+    width: 100%;
+}
+
+/* Estilo para o botão de alternância de senha */
+.password-toggle {
+    background: none;
+    position: absolute;
+    right: 5px; /* Ajuste a posição conforme necessário */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+.error-message {
+    color: var(--red);
+    margin-top: -8px;
+    font-size: 15px;
+    font-weight: var(--medium-f-weight);
+}
+
+.error {
+    border: 1px solid var(--red)
+}
+
+/* Estilo para o botão Enviar */
+.btn {
+    padding: 10px 20px;
+    background-color: var(--color-light-green);
+    color: var(--white);
+    border-radius: var(--20-px);
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: var(--bold-font-n-width);
+}
+
+
+/* Estilo para a mensagem de sucesso após envio do formulário */
+.success-message {
+    text-align: center;
+    max-width: 350px;
+}
+
+.success-message img {
+    max-width: 70px;
+}
+
+.success-message h2 {
+    font-size: 26px;
+    font-weight: var(--bold-font-n-width);
+    margin: 20px 0;
+    color: var(--color-light-green);
+}
+
+.success-message p {
+    font-weight: var(--medium-f-weight);
+}
+
+/* ______________________________________________________________________ */
+/* Responsividade */
+/* Ajuste para telas com largura máxima de 752px */
+
+@media (max-width: 752px) {
+    .container {
+        max-height: 100%;
+    }
+
+    .form-sign-up {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form {
+        width: 260px;
+    }
+}
+
+/* Ajuste para telas com largura máxima de 425px */
+@media (max-width: 425px) {
+    .container {
+        max-width: 250px;
+    }
+
+    .form-sign-up img {
+        width: 100%;
+    }
+}
